@@ -13,11 +13,10 @@
 #
 
 # board: [ "nice_nano_v2","mikoto"]
-board: [ "nice_nano_v2"]
+# board: [ "nice_nano_v2"]
 # shield: [ "charybdis_left","charybdis_right","sofle-plus_left lpm_view_adapter lpm_view","sofle-plus_right lpm_view_adapter lpm_view","sofle-e_left lpm_view","sofle-e_right lpm_view","sofle-x_left lpm_view","sofle-x_right lpm_view"]
-shield: ["sofle-e_left lpm_view","sofle-e_right lpm_view"]
-
-snippet: ["studio-rpc-usb-uart"]
+# shield: ["sofle-e_left lpm_view","sofle-e_right lpm_view"]
+# snippet: ["studio-rpc-usb-uart"]
 
 # include:
 #   - board: corne-v4_left
@@ -26,3 +25,12 @@ snippet: ["studio-rpc-usb-uart"]
 #   - board: corne-v4_right
 #     shield: lpm_view
 #     snippet: studio-rpc-usb-uart
+
+---
+include:
+  - board: nice_nano_v2
+    shield: "sofle-e_left lpm_view"
+    snippet: studio-rpc-usb-uart
+  - board: nice_nano_v2
+    shield: "sofle-e_right lpm_view"
+    snippet: studio-rpc-usb-uart
