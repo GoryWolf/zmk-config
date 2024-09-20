@@ -25,22 +25,36 @@ void rotate_canvas(lv_obj_t *canvas, lv_color_t cbuf[]) {
 }
 
 void draw_battery(lv_obj_t *canvas, const struct status_state *state) {
-    lv_draw_rect_dsc_t rect_black_dsc;
-    init_rect_dsc(&rect_black_dsc, LVGL_BACKGROUND);
-    lv_draw_rect_dsc_t rect_white_dsc;
-    init_rect_dsc(&rect_white_dsc, LVGL_FOREGROUND);
+    #if IS_ENABLED(CONFIG_ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE)
+        char per[4] = {' ', ' ', ' ', ' '};
+        sprintf(per, "%d", state->battery);
+        lv_draw_label_dsc_t label_dsc_bp;
+        init_label_dsc(&label_dsc_bp, LVGL_FOREGROUND, &lv_font_montserrat_16, LV_TEXT_ALIGN_LEFT);
+        lv_canvas_draw_text(canvas, 0, 0, 30, &label_dsc_bp, per);
 
-    lv_canvas_draw_rect(canvas, 0, 2, 29, 12, &rect_white_dsc);
-    lv_canvas_draw_rect(canvas, 1, 3, 27, 10, &rect_black_dsc);
-    lv_canvas_draw_rect(canvas, 2, 4, (state->battery + 2) / 4, 8, &rect_white_dsc);
-    lv_canvas_draw_rect(canvas, 30, 5, 3, 6, &rect_white_dsc);
-    lv_canvas_draw_rect(canvas, 31, 6, 1, 4, &rect_black_dsc);
+        if (state->charging) {
+            lv_draw_img_dsc_t img_dsc;
+            lv_draw_img_dsc_init(&img_dsc);
+            lv_canvas_draw_img(canvas, 31, -1, &bolt, &img_dsc);
+        }
+    #else
+        lv_draw_rect_dsc_t rect_black_dsc;
+        init_rect_dsc(&rect_black_dsc, LVGL_BACKGROUND);
+        lv_draw_rect_dsc_t rect_white_dsc;
+        init_rect_dsc(&rect_white_dsc, LVGL_FOREGROUND);
 
-    if (state->charging) {
-        lv_draw_img_dsc_t img_dsc;
-        lv_draw_img_dsc_init(&img_dsc);
-        lv_canvas_draw_img(canvas, 9, -1, &bolt, &img_dsc);
-    }
+        lv_canvas_draw_rect(canvas, 0, 2, 29, 12, &rect_white_dsc);
+        lv_canvas_draw_rect(canvas, 1, 3, 27, 10, &rect_black_dsc);
+        lv_canvas_draw_rect(canvas, 2, 4, (state->battery + 2) / 4, 8, &rect_white_dsc);
+        lv_canvas_draw_rect(canvas, 30, 5, 3, 6, &rect_white_dsc);
+        lv_canvas_draw_rect(canvas, 31, 6, 1, 4, &rect_black_dsc);
+
+        if (state->charging) {
+            lv_draw_img_dsc_t img_dsc;
+            lv_draw_img_dsc_init(&img_dsc);
+            lv_canvas_draw_img(canvas, 9, -1, &bolt, &img_dsc);
+        }
+    #endif
 }
 
 void init_label_dsc(lv_draw_label_dsc_t *label_dsc, lv_color_t color, const lv_font_t *font,
