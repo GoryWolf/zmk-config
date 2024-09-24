@@ -28,6 +28,9 @@ LV_IMG_DECLARE(mountain);
 LV_IMG_DECLARE(gwlogo);
 LV_IMG_DECLARE(man);
 LV_IMG_DECLARE(guidao);
+LV_IMG_DECLARE(tifa);
+LV_IMG_DECLARE(yumao);
+LV_IMG_DECLARE(lingdai);
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -120,11 +123,11 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     lv_obj_t *art = lv_img_create(widget->obj);
     // bool random = sys_rand32_get() & 1;
     // lv_img_set_src(art, random ? &balloon : &mountain);
-    uint32_t random = sys_rand32_get() % 5;
-    lv_img_dsc_t * img_arr[5] = {&balloon, &mountain, &gwlogo, &man, &guidao};
+    uint32_t random = sys_rand32_get() % 8;
+    lv_img_dsc_t * img_arr[5] = {&balloon, &mountain, &gwlogo, &man, &guidao, &tifa, &yumao, &lingdai};
     lv_img_set_src(art, img_arr[random]);
     // 默认图大小140X68，如需全屏显示图片，偏移量20改为0后，使用160X68图片
-    // 坚向编辑图片后左旋90度，保存为bmp、jpg、png后在 https://lvgl.io/tools/imageconverter 在线转换
+    // 坚向编辑图片后右旋90度，保存为bmp、jpg、png后在 https://lvgl.io/tools/imageconverter 在线转换
     // 转换参数lvgl v8/CF_INDEXED_1_BIT/C array
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
 
