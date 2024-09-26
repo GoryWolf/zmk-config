@@ -8,11 +8,16 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: gorywolf
       url-base: https://github.com/gorywolf
+    - name: gpeye
+      url-base: https://github.com/GPeye
   projects:
     - name: zmk
       remote: zmkofficial
       revision: main
       import: app/west.yml
+    - name: zmk-periph-urchin
+      remote: gpeye
+      revision: main
     # - name: zmk-pmw3610-driver
     #   remote: badjeff
     #   revision: main
