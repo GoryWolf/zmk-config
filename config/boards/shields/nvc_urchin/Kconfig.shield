@@ -1,5 +1,5 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_NICE_VIEW_CUSTOM
+config SHIELD_NVC_URCHIN
     def_bool $(shields_list_contains,nvc_urchin)

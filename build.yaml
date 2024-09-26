@@ -28,17 +28,17 @@
 
 ---
 include:
-  # - board: nice_nano_v2
-  #   shield: "sofle-e_left nice_view"
-  # - board: nice_nano_v2
-  #   shield: "sofle-e_right nice_view"
-  # - board: nice_nano_v2
-  #   shield: "sofle-e_left nvc_gw"
+  - board: nice_nano_v2
+    shield: "sofle-e_left nice_view"
+  - board: nice_nano_v2
+    shield: "sofle-e_right nice_view"
+  - board: nice_nano_v2
+    shield: "sofle-e_left nvc_gw"
   - board: nice_nano_v2
     shield: "sofle-e_right nvc_gw"
-  # - board: nice_nano_v2
-  #   shield: "sofle-e_right nvc_mario"
-  # - board: nice_nano_v2
-  #   shield: "sofle-e_right nvc_slideshow"
-  # - board: nice_nano_v2
-  #   shield: "sofle-e_right nvc_urchin"
+  - board: nice_nano_v2
+    shield: "sofle-e_right nvc_mario"
+  - board: nice_nano_v2
+    shield: "sofle-e_right nvc_slideshow"
+  - board: nice_nano_v2
+    shield: "sofle-e_right nvc_urchin"

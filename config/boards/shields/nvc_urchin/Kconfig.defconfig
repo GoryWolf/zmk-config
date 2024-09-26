@@ -1,7 +1,7 @@
 # Copyright (c) 2023 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_NICE_VIEW_CUSTOM
+if SHIELD_NVC_URCHIN
 
 config CUSTOM_ANIMATION_SPEED
     int "Total duration in milliseconds for animation to take"
@@ -61,4 +61,4 @@ config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
 config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
     bool "Show battery percentage or icon."
 
-endif # SHIELD_NICE_VIEW
+endif # SHIELD_NVC_URCHIN
