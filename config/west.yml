@@ -6,13 +6,13 @@ manifest:
     #   url-base: https://github.com/badjeff
     - name: zmkofficial
       url-base: https://github.com/zmkfirmware
-    # - name: gorywolf
-    #   url-base: https://github.com/gorywolf
+    - name: gorywolf
+      url-base: https://github.com/gorywolf
     # - name: gpeye
     #   url-base: https://github.com/GPeye
   projects:
     - name: zmk
-      remote: zmkofficial
+      remote: gorywolf
       revision: main
       import: app/west.yml
     # - name: zmk-periph-urchin
