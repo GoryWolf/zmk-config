@@ -44,11 +44,6 @@
             bindings = <&mo 3>;
             key-positions = <36 37>;
         };
-
-        DF2Space {
-            bindings = <&kp SPACE>;
-            key-positions = <32 33>;
-        };
     };
 
     behaviors {
