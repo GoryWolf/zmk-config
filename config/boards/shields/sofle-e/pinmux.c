@@ -11,6 +11,8 @@
 #include <zephyr/sys/sys_io.h>
 #include <zephyr/devicetree.h>
 
+const struct device *gpio_dev = DEVICE_DT_GET(DT_NODELABEL(gpio0));
+
 static int pinmux_mikoto_init(void) {
 
 // #if CONFIG_BOARD_MIKOTO
@@ -43,9 +45,9 @@ static int pinmux_mikoto_init(void) {
 // #endif
 //     return 0;
 
-
-int ret = gpio_pin_configure(gpio_dev, PIN, GPIO_INPUT | GPIO_DISCONNECTED);
-return ret;
+gpio_pin_configure(gpio_dev, 29, GPIO_INPUT | GPIO_DISCONNECTED);
+gpio_pin_configure(gpio_dev, 31, GPIO_INPUT | GPIO_DISCONNECTED);
+return 0;
 }
 
 SYS_INIT(pinmux_mikoto_init, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
