@@ -98,7 +98,7 @@
 &trans  &kp BACKSPACE  &kp DEL  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN      &trans      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans    &trans      &trans
 &kp N1  &trans         &trans   &trans    &trans    &trans     &trans             &trans      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans    &trans      &kp K_CALC
         &trans         &trans   &trans    &trans    &trans                                    &trans           &trans           &kp KP_NUMBER_0  &kp00     &kp KP_DOT
-                       &kp UP   &kp LEFT  &kp DOWN  &kp RIGHT  &kp K_MUTE         &kp KP_NUM                   &kp END          &kp PG_DN        &kp HOME  &kp PG_UP
+                       &kp UP   &kp LEFT  &kp DOWN  &kp RIGHT  &kp C_MUTE         &kp KP_NUM                   &kp END          &kp PG_DN        &kp HOME  &kp PG_UP
             >;
 
             sensor-bindings =
@@ -125,12 +125,12 @@
         micro_layer {
             display-name = "Micro";
             bindings = <
-&trans  &trans  &trans       &trans       &trans       &trans       &trans          &trans   &trans  &trans   &trans     &trans    &trans     &trans
-&trans  &trans  &kp LC(F14)  &kp LC(F15)  &kp LC(F16)  &kp LC(F17)  &trans          &trans   &trans  &trans   &trans     &trans    &trans     &trans
-&trans  &trans  &kp LC(F18)  &kp LC(F19)  &trans       &trans       &trans          &trans   &trans  &trans   &trans     &trans    &trans     &trans
-&kp N3  &trans  &trans       &trans       &trans       &trans       &trans          &trans   &trans  &trans   &trans     &trans    &trans     &trans
-        &trans  &trans       &trans       &trans       &trans                                &trans  &trans   &trans     &trans    &trans
-                &kp UP       &kp LEFT     &kp DOWN     &kp RIGHT    &kp K_MUTE      &kp INS          &kp END  &kp PG_DN  &kp HOME  &kp PG_UP
+&trans  &trans  &trans        &trans       &trans        &trans       &trans        &trans   &trans  &trans   &trans     &trans    &trans     &trans
+&trans  &trans  &kp LC(F14)   &kp LC(F15)  &kp LC(F16)   &kp LC(F17)  &trans        &trans   &trans  &trans   &trans     &trans    &trans     &trans
+&trans  &trans  &kp LC(F18)   &kp LC(F19)  &trans        &trans       &trans        &trans   &trans  &trans   &trans     &trans    &trans     &trans
+&kp N3  &trans  &trans        &trans       &trans        &trans       &trans        &trans   &trans  &trans   &trans     &trans    &trans     &trans
+        &trans  &trans        &trans       &trans        &trans                              &trans  &trans   &trans     &trans    &trans
+                &kp C_VOL_UP  &kp C_PREV   &kp C_VOL_DN  &kp C_NEXT   &kp C_PP      &kp INS          &kp END  &kp PG_DN  &kp HOME  &kp PG_UP
             >;
 
             sensor-bindings =
@@ -146,7 +146,7 @@
 &trans             &trans  &trans        &trans        &trans        &trans        &trans            &trans   &trans        &trans   &trans     &trans    &trans     &trans
 &kp N4             &trans  &trans        &trans        &trans        &trans        &out OUT_BLE      &trans   &trans        &trans   &trans     &trans    &trans     &trans
                    &trans  &trans        &trans        &trans        &trans                                   &trans        &trans   &trans     &trans    &trans
-                           &kp UP        &kp LEFT      &kp DOWN      &kp RIGHT     &kp K_MUTE        &kp INS                &kp END  &kp PG_DN  &kp HOME  &kp PG_UP
+                           &kp UP        &kp LEFT      &kp DOWN      &kp RIGHT     &kp C_MUTE        &kp INS                &kp END  &kp PG_DN  &kp HOME  &kp PG_UP
             >;
 
             sensor-bindings =
