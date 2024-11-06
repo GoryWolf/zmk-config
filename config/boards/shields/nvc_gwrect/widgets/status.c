@@ -134,9 +134,9 @@ static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status
     lv_draw_arc_dsc_t arc_dsc_filled;
     init_arc_dsc(&arc_dsc_filled, LVGL_FOREGROUND, 9);
     lv_draw_label_dsc_t label_dsc;
-    init_label_dsc(&label_dsc, LVGL_FOREGROUND, &lv_font_montserrat_14, LV_TEXT_ALIGN_LEFT);
+    init_label_dsc(&label_dsc, LVGL_FOREGROUND, &lv_font_montserrat_12, LV_TEXT_ALIGN_LEFT);
     lv_draw_label_dsc_t label_dsc_right;
-    init_label_dsc(&label_dsc_right, LVGL_FOREGROUND, &lv_font_montserrat_14, LV_TEXT_ALIGN_RIGHT);
+    init_label_dsc(&label_dsc_right, LVGL_FOREGROUND, &lv_font_montserrat_12, LV_TEXT_ALIGN_RIGHT);
     // lv_draw_label_dsc_t label_dsc_black;
     // init_label_dsc(&label_dsc_black, LVGL_BACKGROUND, &lv_font_montserrat_18, LV_TEXT_ALIGN_CENTER);
 
@@ -167,8 +167,8 @@ static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status
 
     char label1[] = "I believe";
     char label2[] = "I can fly!";
-    lv_canvas_draw_text(canvas, 2, 22, 64, &label_dsc, label1);
-    lv_canvas_draw_text(canvas, 2, 38, 64, &label_dsc_right, label2);
+    lv_canvas_draw_text(canvas, 0, 26, 68, &label_dsc, label1);
+    lv_canvas_draw_text(canvas, 0, 42, 68, &label_dsc_right, label2);
 
     // Rotate canvas
     rotate_canvas(canvas, cbuf);
