@@ -136,7 +136,7 @@ static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status
     lv_draw_label_dsc_t label_dsc;
     init_label_dsc(&label_dsc, LVGL_FOREGROUND, &lv_font_montserrat_18, LV_TEXT_ALIGN_LEFT);
     lv_draw_label_dsc_t label_dsc_right;
-    init_label_dsc(&label_dsc_right, LVGL_FOREGROUND, &lv_font_montserrat_18, LV_TEXT_ALIGN_right);
+    init_label_dsc(&label_dsc_right, LVGL_FOREGROUND, &lv_font_montserrat_18, LV_TEXT_ALIGN_RIGHT);
     // lv_draw_label_dsc_t label_dsc_black;
     // init_label_dsc(&label_dsc_black, LVGL_BACKGROUND, &lv_font_montserrat_18, LV_TEXT_ALIGN_CENTER);
 
