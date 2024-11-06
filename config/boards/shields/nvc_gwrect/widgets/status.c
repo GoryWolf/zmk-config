@@ -167,8 +167,8 @@ static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status
 
     char label1[] = "I believe";
     char label2[] = "I can fly!";
-    lv_canvas_draw_text(canvas, 5, 24, 8, &label_dsc, label1);
-    lv_canvas_draw_text(canvas, 5, 35, 8, &label_dsc_right, label2);
+    lv_canvas_draw_text(canvas, 2, 22, 64, &label_dsc, label1);
+    lv_canvas_draw_text(canvas, 2, 38, 64, &label_dsc_right, label2);
 
     // Rotate canvas
     rotate_canvas(canvas, cbuf);
