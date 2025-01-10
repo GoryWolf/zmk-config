@@ -109,12 +109,12 @@
         raise_layer {
             display-name = "Raise";
             bindings = <
-&trans  &trans           &kp F1  &kp F2           &kp F3           &kp F4           &kp F5          &kp F6     &kp F7    &kp F8    &kp F9     &kp F10        &kp F11    &kp F12
-&trans  &trans           &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans          &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans         &trans     &trans
-&trans  &trans           &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans          &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp DEL    &trans
-&kp N2  &trans           &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans          &trans     &trans    &trans    &trans     &trans         &trans     &kp K_CALCULATOR
-        &kp KP_NUMBER_0  &kp00   &kp KP_DOT       &trans           &trans                                      &trans    &trans    &trans     &trans         &trans
-                         &kp UP  &kp LEFT         &kp DOWN         &kp RIGHT        &kp KP_NUM      &kp INS              &kp END   &kp PG_DN  &kp HOME       &kp PG_UP
+&trans  &trans           &kp F1  &kp F2           &kp F3           &kp F4           &kp F5               &kp F6     &kp F7    &kp F8    &kp F9     &kp F10        &kp F11    &kp F12
+&trans  &trans           &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH         &kp PG_UP  &kp HOME  &kp UP    &kp END    &trans         &trans     &trans
+&trans  &trans           &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK      &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSPACE  &kp DEL    &trans
+&kp N2  &trans           &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS         &trans     &trans    &trans    &trans     &trans         &trans     &kp K_CALCULATOR
+        &kp KP_NUMBER_0  &kp00   &kp KP_DOT       &kp KP_PLUS      &trans                                           &trans    &trans    &trans     &trans         &trans
+                         &kp UP  &kp LEFT         &kp DOWN         &kp RIGHT        &kp KP_NUM           &kp INS              &kp END   &kp PG_DN  &kp HOME       &kp PG_UP
             >;
 
             sensor-bindings =
